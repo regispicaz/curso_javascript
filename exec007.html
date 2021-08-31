@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma...</title>
+    <style>
+        body{
+            font: normal 18pt arial;
+        }
+        input{
+            font: normal 18pt arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores...</h1>
+    <input type="number" name="txt1" id="txtn1"> + 
+    <input type="number" name="txt2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        function somar() { //Função para recepção dos valores e tratamento dos dados para devido retorno
+            var tn1 = window.document.getElementById('txtn1')//Chamando o input de primeiro valor
+            var tn2 = window.document.querySelector('input#txtn2')//chamando o imput de segundo valor
+            var res = window.document.querySelector('div#res')//chamando a div #res
+            var n1 = Number(tn1.value)//Transformando strings em number
+            var n2 = Number(tn2.value)//
+            var s = n1 + n2 //Realizando a soma das variáveis de imput de valor
+            res.innerHTML = `O resultado da soma de ${n1} e ${n2} é <strong>${s}</strong>` //Mostrando resultado com a soma realizada com placeholder
+        }
+    </script>
+</body>
+</html>
