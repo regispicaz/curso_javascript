@@ -9,7 +9,7 @@ var diasem = agora.getDay()
     5 = Sexta
     6 = Sábado
 */
-switch(diasem){
+switch(diasem){//Bom para testar extruturas pontuais
     case 0:
         console.log(`Domingo`)
         break
