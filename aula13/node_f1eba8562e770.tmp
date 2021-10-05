@@ -5,7 +5,7 @@ do{
     console.log(`Passo ${cont}`)
     cont++
 }
-while (cont <= 100)
+while (cont <= 10000000)
 
 /*
 var cont = 1 //Variável
