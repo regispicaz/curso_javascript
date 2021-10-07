@@ -1,21 +1,21 @@
 //Função que mostra texto alterado com dados inseridos pelo usuário
 function clicar(){
+   
+    let init = document.getElementById("init");
+    let end = document.getElementById("end");
+    let num = document.getElementById("walk");
+    let res = document.getElementById("res");
     
-    if(passo_init != null, passo_end != null, passo_calc != null ){
-         //Variáveis para recebimento dos valores inseridos pelo usuário
-         var passo_init = document.querySelector("#init").value;
-         var init_vle = passo_init;
-         var passo_end = document.querySelector("#end").value;
-         var end_vle = passo_end;
-         var passo_calc = document.querySelector("#walk");
-         var calc_vle = passo_calc;
-         
-         //Imprimindo na tela os valores coletaods
-         document.querySelector("#res").innerHTML =`Passo inicial é ${init_vle}, o passo final é ${end_vle}!`
-        
+    if(init.value.length == 0 || end.value.length == 0 || num.value.length == 0){
+        alert("[ERRO] Faltam os dados!")
     }else{
-        alert("Os camos devem estar preenchidos")
-    }
-    
-    
+        res.innerHTML = `Contando`;
+        let i = Number(init.value);
+        let f = Number(end.value);
+        let p = Number(num.value);
+
+        for(let count = i; count <= f; count += p){
+            res.innerHTML += `${count}, `
+        }
+    }   
 }
